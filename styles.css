@@ -1,0 +1,69 @@
+/* Estilo padrão para telas grandes (desktop) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px; /* Ajuste conforme necessário */
+}
+
+/* Estilo para desktops médios */
+@media (max-width: 1200px) {
+    .container {
+        width: 85%;
+    }
+}
+
+/* Estilo para tablets */
+@media (max-width: 992px) {
+    .container {
+        width: 90%;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .search-box input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .destinations .destination {
+        width: 48%;
+    }
+}
+
+/* Estilo para celulares */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .destinations .destination {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .search-box input, .search-box button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .promo h2 {
+        font-size: 18px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
