@@ -1,69 +1,205 @@
-/* Estilo padrão para telas grandes (desktop) */
-body {
-    font-family: Arial, sans-serif;
+/* Reset básico */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 16px; /* Ajuste conforme necessário */
 }
 
-/* Estilo para desktops médios */
-@media (max-width: 1200px) {
-    .container {
-        width: 85%;
-    }
+/* Estilos Globais */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
-/* Estilo para tablets */
-@media (max-width: 992px) {
-    .container {
-        width: 90%;
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont_Title{
+    width: 50%;
+    text-align: justify;
+    align-items: center;
+}
+
+/* Estilo do Header */
+header {
+    background-color: #0A47A1;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    float: left;
+    margin-left: 10px;
+    font-size: 24px;
+}
+
+nav ul {
+    float: right;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a.button {
+    padding: 10px 20px;
+    background-color: #FFD700;
+    color: #0A47A1;
+    border-radius: 5px;
+}
+
+/* Estilo da Hero Section */
+.hero {
+    background-color: #0A47A1;
+    color: #fff;
+    padding: 100px 0;
+    position: relative;
+   /*  align-items: center; */
+}
+
+.hero h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.search-bar {
+    width: 70%;
+    height: 80px;
+    position: absolute;
+    bottom: -40px; /* ajusta a posição vertical da barra de busca */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input[type="text"] {
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+
+.search-bar button {
+    padding: 15px 30px;
+    border: none;
+    background-color: #00A651;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilo das Destinações */
+.destinations {
+    padding: 90px 0; /* ajustado para acomodar a barra de busca */
+    text-align: center;
+}
+
+.destination {
+    display: inline-block;
+    width: 22%;
+    margin: 2%;
+    vertical-align: top;
+    text-align: left;
+}
+
+.destination img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.destination h3 {
+    margin: 10px 0;
+}
+
+.destination h3 span {
+    color: #FFD700;
+}
+
+.destination p {
+    font-size: 14px;
+}
+
+/* Estilo da Seção Promo */
+.promo {
+    background-color: #f2f2f2;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.promo h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.promo h2 span {
+    color: #00A651;
+}
+
+.promo p {
+    font-size: 18px;
+}
+
+/* Estilo do Footer */
+footer {
+    background-color: #00A651;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    header h1, nav ul {
+        float: none;
+        text-align: center;
     }
 
-    header nav ul {
+    .search-bar {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
-    .hero h2 {
-        font-size: 28px;
-    }
-
-    .search-box input {
-        width: 100%;
+    .search-bar input[type="text"] {
+        width: 90%;
         margin-bottom: 10px;
     }
 
-    .destinations .destination {
-        width: 48%;
+    .destination {
+        width: 46%;
     }
 }
 
-/* Estilo para celulares */
-@media (max-width: 768px) {
-    .container {
-        width: 95%;
-    }
-
-    .hero h2 {
-        font-size: 24px;
-    }
-
-    .destinations .destination {
+@media screen and (max-width: 480px) {
+    .destination {
         width: 100%;
-        margin-bottom: 20px;
-    }
-    
-    .search-box input, .search-box button {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .promo h2 {
-        font-size: 18px;
-    }
-
-    footer {
-        font-size: 14px;
+        margin: 10px 0;
     }
 }
