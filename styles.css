@@ -7,6 +7,7 @@
 
 /* Estilos Globais */
 body {
+    
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
@@ -17,12 +18,13 @@ body {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .cont_Title{
     width: 50%;
     text-align: justify;
-    align-items: center;
+    
 }
 
 /* Estilo do Header */
@@ -30,6 +32,7 @@ header {
     background-color: #0A47A1;
     color: #fff;
     padding: 20px 0;
+    
 }
 
 header h1 {
@@ -65,9 +68,10 @@ nav ul li a.button {
 .hero {
     background-color: #0A47A1;
     color: #fff;
-    padding: 100px 0;
+    height: 55vh; /* Define a altura em 50% da altura da viewport */
+    text-align: center;
     position: relative;
-   /*  align-items: center; */
+    padding-top: 20px; /* Um pouco de padding superior para o conteúdo */
 }
 
 .hero h2 {
@@ -114,7 +118,12 @@ nav ul li a.button {
 
 /* Estilo das Destinações */
 .destinations {
-    padding: 90px 0; /* ajustado para acomodar a barra de busca */
+    padding: 50px 0;
+    text-align: center;
+}
+
+.destinations2 {
+    padding: 10px 0;
     text-align: center;
 }
 
@@ -127,8 +136,10 @@ nav ul li a.button {
 }
 
 .destination img {
-    width: 100%;
-    border-radius: 10px;
+    width: 260px;   /* Largura fixa */
+    height: 172px;  /* Altura fixa */
+    object-fit: cover; /* Mantém a proporção e cobre a área definida */
+    border-radius: 10px; /* Bordas arredondadas */
 }
 
 .destination h3 {
@@ -145,9 +156,17 @@ nav ul li a.button {
 
 /* Estilo da Seção Promo */
 .promo {
-    background-color: #f2f2f2;
+    width: 90%;
     padding: 50px 0;
+    display: flex;
+    justify-content: space-around;
     text-align: center;
+}
+
+.promo .container{
+    width: 40%;
+    text-align: center;
+    display: block;
 }
 
 .promo h2 {
@@ -155,12 +174,16 @@ nav ul li a.button {
     margin-bottom: 10px;
 }
 
-.promo h2 span {
-    color: #00A651;
+.promo span.promo-green {
+    color: #00A651; /* Cor verde */
 }
 
 .promo p {
     font-size: 18px;
+}
+
+.promo span.promo-yellow {
+    color: #FFD700; /* Cor amarela */
 }
 
 /* Estilo do Footer */
@@ -173,6 +196,10 @@ footer {
 
 footer p {
     margin: 5px 0;
+}
+
+footer .footer-yellow{
+    background-color: #FFD700;
 }
 
 /* Responsividade */
